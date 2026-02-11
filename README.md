@@ -1,116 +1,121 @@
 # 🌱 BrainBonsai
 
-**BrainBonsai** is a gamified Web3 learning platform that helps people understand complex ecosystems in a calm, visual, and non-intimidating way.
+**BrainBonsai** is a gamified Web3 learning and onboarding platform that helps people understand blockchain ecosystems through exploration, not static courses.
 
-Instead of static courses, BrainBonsai uses a **grow-a-tree metaphor** where learning actions grow a digital garden.  
-When a tree reaches maturity, users earn an **NFT-based learning credential** as proof of exploration.
+Learning is visualized as a growing digital garden.  
+When a learning tree reaches maturity, users receive an **on-chain NFT credential** representing their learning journey.
 
-> BrainBonsai is about *confidence and understanding*, not certificates or speculation.
-
----
-
-## ✨ Why BrainBonsai?
-
-Web3 education often fails because:
-- Documentation is overwhelming
-- Courses get outdated quickly
-- Wallets and transactions feel risky
-- Beginners fear irreversible mistakes
-
-**BrainBonsai fixes this by:**
-- Focusing on *conceptual understanding*
-- Using visual, game-like exploration
-- Removing fear from first interactions
-- Making learning progress verifiable
+BrainBonsai is designed for **confidence-building**, not speculation.
 
 ---
 
-## 🧠 How It Works
+## 🧠 The Problem
 
-### 🌱 1. Plant a Seed
-Users choose a topic (e.g. Ethereum, Layer 2s, ZK Proofs).
+Web3 onboarding is broken because:
+- Wallets, gas, and transactions feel irreversible and risky
+- Learning resources become outdated quickly
+- Proof of learning is informal and non-verifiable
+- New users are forced into technical complexity too early
 
-### 🌿 2. Grow the Tree
-- Explore concepts (branches)
-- Reinforce with flashcards (leaves)
-- Test understanding with quizzes (fruits & flowers)
+---
 
-Each action increases the tree’s **maturity**.
+## 🌳 The BrainBonsai Solution
 
-### 🌳 3. Earn a Credential
-When maturity reaches 100%:
-- A **learning NFT** is minted
-- Issued to the user’s wallet
-- Gas fees are paid by BrainBonsai (gasless for users)
+BrainBonsai introduces **progressive, low-fear onboarding** using three layers:
 
-The NFT represents:
+1. **Simulation (Sandbox)** — zero-risk interaction with Web3 concepts  
+2. **Exploration (Learning Garden)** — guided conceptual understanding  
+3. **Verification (On-chain Credential)** — proof of learning on-chain  
+
+Users are never forced into real blockchain interactions before they are ready.
+
+---
+
+## 🌱 Learning Model
+
+Each topic is represented as a **seed**:
+- Ethereum
+- Layer 2s
+- Zero-Knowledge Proofs
+- DeFi primitives
+- Protocol ecosystems
+
+### Learning actions grow the tree:
+- Exploring concepts → branches
+- Flashcards → leaves
+- Quizzes → fruits & flowers
+
+Tree maturity increases with engagement, not time.
+
+---
+
+## 🏅 On-Chain Learning Credentials
+
+When a tree reaches maturity, BrainBonsai mints a **learning credential NFT**.
+
+### NFT Standard
+- **ERC-721**
+- One NFT per completed learning seed
+- Non-financial, non-transfer-focused usage
+
+### NFT Represents
 - Topic explored
-- Engagement depth
 - Completion status
+- Issuer (BrainBonsai)
+- Timestamp and metadata
+- Wallet ownership
 
-> These NFTs are **proof of learning**, not financial assets.
+> These NFTs are **proof of participation and understanding**, not academic certificates.
 
 ---
 
-## 🧸 Web3 Sandbox (Fear-Free Onboarding)
+## ⛽ Gasless & Beginner-Friendly Minting
 
-To help non-technical users, BrainBonsai includes a **Web3 Sandbox** — an interactive simulation that teaches:
+BrainBonsai removes friction by sponsoring transactions:
+
+- Users do **not** need ETH
+- Gas fees are paid by the platform
+- NFTs are minted directly to user wallets
+
+This enables **first-time Web3 participation without financial risk**.
+
+---
+
+## 🧾 Account Abstraction & Wallets
+
+BrainBonsai uses a **progressive custody model**:
+
+### Current Architecture
+- Wallets are created automatically on sign-in
+- Private keys are encrypted at rest
+- Users interact without handling keys directly
+
+### Forward-Compatible Design
+BrainBonsai is designed to support:
+- **ERC-4337 (Account Abstraction)**
+- Gas sponsorship via paymasters
+- Session keys for limited permissions
+- Optional migration to full self-custody
+
+> Custodial by default. User-owned by choice.
+
+---
+
+## 🧸 Web3 Sandbox (Simulation Layer)
+
+BrainBonsai includes an interactive **Web3 Sandbox** that simulates:
 
 - Wallet addresses
-- Sending tokens
-- Network fees (gas)
-- Transaction approvals
+- Token transfers
+- Transaction confirmations
+- Gas fees
+- Block explorers
 - NFTs and ownership
 
-🟢 **Everything in the sandbox is simulated**
-- No real wallets
+### Sandbox Principles
+- No real blockchain
+- No real keys
 - No real money
-- No private keys
-- Nothing can be lost
+- Fully reversible actions
 
-Think of it as *Web3 with training wheels*.
-
----
-
-## 🔐 Wallets & Identity
-
-- Users sign in with **Google**
-- A wallet is created automatically (custodial by default)
-- Private keys are **encrypted**
-- Users can later export or migrate to self-custody (planned)
-
-> Goal: remove onboarding friction while respecting ownership.
-
----
-
-## 🏗️ Tech Stack
-
-### Frontend
-- HTML
-- CSS
-- Vanilla JavaScript
-- Runs on Live Server
-
-### Backend
-- FastAPI (Python)
-- SQLAlchemy
-- SQLite / PostgreSQL
-- Groq LLM (for content generation)
-
-### Web3
-- Ethereum (Sepolia testnet)
-- Web3.py
-- NFT smart contract (mint function only)
-- Gas sponsored by platform
-
----
-
-## 🚀 Running the Project Locally
-
-### Backend
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-uvicorn main:app --reload
+The sandbox builds mental models **before** real on-
